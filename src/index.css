@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0A111C;
+  --bg-secondary: #111C2D;
+  --color-gold: #C89D54;
+  --color-gold-light: #DFB76C;
+  --color-gold-dark: #B3843B;
+  --color-text-main: #F4F4F6;
+  --color-text-sub: #9BA3B0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A111C;
+}
+::-webkit-scrollbar-thumb {
+  background: #18263D;
+  border-radius: 4px;
+  border: 1px solid rgba(200, 157, 84, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C89D54;
+}
+
+/* Luxury Utilities */
+@layer utilities {
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #ECC880 0%, #DFB76C 35%, #C89D54 70%, #B3843B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .border-gold-subtle {
+    border: 1px solid rgba(200, 157, 84, 0.2);
+  }
+  
+  .glass-card {
+    background: rgba(17, 28, 45, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(200, 157, 84, 0.2);
+  }
+  
+  .glass-card-hover {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .glass-card-hover:hover {
+    border-color: rgba(200, 157, 84, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.7), 0 0 20px rgba(200, 157, 84, 0.15);
+  }
+
+  .gold-ring-glow {
+    box-shadow: 0 0 0 2px rgba(200, 157, 84, 0.3), 0 0 24px rgba(200, 157, 84, 0.2);
+  }
+}
+
+/* Ambient 3D Floating Sealed Habano Effect */
+@keyframes float3D {
+  0% {
+    transform: perspective(1000px) translateY(0px) rotateX(4deg) rotateY(-4deg) rotateZ(0deg);
+  }
+  50% {
+    transform: perspective(1000px) translateY(-18px) rotateX(-3deg) rotateY(3deg) rotateZ(-1.5deg);
+  }
+  100% {
+    transform: perspective(1000px) translateY(0px) rotateX(4deg) rotateY(-4deg) rotateZ(0deg);
+  }
+}
+
+@keyframes shadowPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.65;
+  }
+  50% {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.65;
+  }
+}
+
+.animate-float-habano {
+  animation: float3D 6.5s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+.animate-shadow-habano {
+  animation: shadowPulse 6.5s ease-in-out infinite;
+}
+
+/* Subtle Golden Shimmer */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-gold {
+  background: linear-gradient(90deg, transparent, rgba(223, 183, 108, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: goldShimmer 4s infinite;
+}
+
+/* Negro Mercado Marquee & Stage Animations */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 24s linear infinite;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 50s linear infinite;
+}
+
