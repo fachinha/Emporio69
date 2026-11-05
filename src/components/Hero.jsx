@@ -58,10 +58,10 @@ export default function Hero() {
               {/* Minimalist Pill CTA Buttons (Inspired by Negro Mercado) */}
               <div className="flex flex-wrap items-center gap-4">
                 <a
-                  href="#sommelier"
+                  href="#catalogo"
                   className="group inline-flex items-center gap-4 pl-7 pr-3 py-3 rounded-full bg-gold-gradient text-[#0A111C] font-montserrat font-bold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 hover:shadow-gold-glow hover:scale-[1.02]"
                 >
-                  <span>Descubrir Maridajes</span>
+                  <span>Explorar Catálogo</span>
                   <div className="w-8 h-8 rounded-full bg-[#0A111C] text-[#DFB76C] flex items-center justify-center transition-transform duration-300 group-hover:rotate-45">
                     <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
                   </div>
@@ -137,8 +137,8 @@ export default function Hero() {
 
         {/* Scroll Indicator */}
         <a 
-          href="#sommelier"
-          aria-label="Ir a sommelier"
+          href="#catalogo"
+          aria-label="Ir al catálogo"
           className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center justify-center text-[#9BA3B0] hover:text-[#DFB76C] transition-colors"
         >
           <ChevronDown className="w-5 h-5 animate-bounce text-[#C89D54]/70" />

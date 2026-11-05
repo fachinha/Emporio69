@@ -15,10 +15,10 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: 'Sommelier', href: '#sommelier' },
     { label: 'Catálogo', href: '#catalogo' },
+    { label: 'Sommelier', href: '#sommelier' },
     { label: 'Ritual de Copa', href: '#experiencias' },
-    { label: 'El Ritual', href: '#ritual' },
+    { label: 'Nosotros', href: '#nosotros' },
   ];
 
   return (

@@ -23,16 +23,16 @@ export default function App() {
         {/* Hero Section with 3D Floating Habano and Smoke Drift */}
         <Hero />
 
-        {/* Sommelier Virtual Interactivo */}
-        <SommelierVirtual />
-
-        {/* Catálogo Seleccionado con Filtros y WhatsApp */}
+        {/* 1° Catálogo Seleccionado con Filtros y WhatsApp */}
         <Catalog />
 
-        {/* Experiencias: Ritual de Copa & Catas Privadas */}
+        {/* 2° Sommelier Virtual Interactivo */}
+        <SommelierVirtual />
+
+        {/* 3° Experiencias: Ritual de Copa & Catas Privadas */}
         <RitualEvents />
 
-        {/* El Ritual del Buen Vivir Manifesto */}
+        {/* 4° Nosotros (Locales en Bariloche & Instagram) */}
         <BrandStory />
       </main>
 

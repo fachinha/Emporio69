@@ -31,7 +31,7 @@ export default function Footer() {
             {/* Social Channels */}
             <div className="flex items-center gap-3">
               <a
-                href="https://www.instagram.com/emporio69tabaqueria/"
+                href="https://www.instagram.com/emporio69tabaqueria/?hl=es"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-xl bg-[#111C2D] border border-[#C89D54]/30 text-[#DFB76C] hover:text-white hover:border-[#DFB76C] hover:shadow-gold-glow transition-all"
@@ -63,13 +63,13 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-xs font-montserrat uppercase tracking-wider">
               <li>
-                <a href="#sommelier" className="hover:text-[#DFB76C] transition-colors">
-                  Sommelier de Maridaje
+                <a href="#catalogo" className="hover:text-[#DFB76C] transition-colors">
+                  Catálogo Seleccionado
                 </a>
               </li>
               <li>
-                <a href="#catalogo" className="hover:text-[#DFB76C] transition-colors">
-                  Catálogo Seleccionado
+                <a href="#sommelier" className="hover:text-[#DFB76C] transition-colors">
+                  Sommelier de Maridaje
                 </a>
               </li>
               <li>
@@ -78,13 +78,13 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#ritual" className="hover:text-[#DFB76C] transition-colors">
-                  El Ritual del Buen Vivir
+                <a href="#nosotros" className="hover:text-[#DFB76C] transition-colors">
+                  Nosotros
                 </a>
               </li>
               <li>
                 <a 
-                  href="https://www.instagram.com/emporio69tabaqueria/" 
+                  href="https://www.instagram.com/emporio69tabaqueria/?hl=es" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-[#DFB76C] transition-colors flex items-center gap-1.5"
@@ -98,22 +98,34 @@ export default function Footer() {
           {/* Location & Contact (4 cols) */}
           <div className="lg:col-span-4">
             <h4 className="font-serif text-lg font-bold text-[#F4F4F6] mb-5 tracking-wide">
-              Ubicación & Contacto
+              Nuestros Locales
             </h4>
             
-            <ul className="space-y-4 text-xs font-sans">
-              <li className="flex items-start gap-3">
+            <ul className="space-y-3.5 text-xs font-sans">
+              <li className="flex items-start gap-3 p-3 rounded-xl bg-[#111C2D]/50 border border-white/5">
                 <MapPin className="w-4 h-4 text-[#DFB76C] flex-shrink-0 mt-0.5" />
-                <span>
-                  Patagonia Argentina • San Carlos de Bariloche & Región Cordillerana
-                </span>
+                <div>
+                  <strong className="text-[#F4F4F6] block font-montserrat text-xs">📍 Mitre 295</strong>
+                  <span className="text-[#9BA3B0] text-[11px] block mt-0.5">
+                    Horario: 9:30 - 13:30 hs / 17:00 - 21:00 hs
+                  </span>
+                  <span className="text-[#DFB76C]/70 text-[10px] uppercase font-montserrat tracking-wider">
+                    San Carlos de Bariloche
+                  </span>
+                </div>
               </li>
 
-              <li className="flex items-center gap-3">
-                <Clock className="w-4 h-4 text-[#DFB76C] flex-shrink-0" />
-                <span>
-                  Lunes a Sábados: 11:00 a 21:00 hs
-                </span>
+              <li className="flex items-start gap-3 p-3 rounded-xl bg-[#111C2D]/50 border border-white/5">
+                <MapPin className="w-4 h-4 text-[#DFB76C] flex-shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-[#F4F4F6] block font-montserrat text-xs">📍 Quaglia 262</strong>
+                  <span className="text-[#9BA3B0] text-[11px] block mt-0.5">
+                    Horario: 17:00 - 21:00 hs
+                  </span>
+                  <span className="text-[#DFB76C]/70 text-[10px] uppercase font-montserrat tracking-wider">
+                    San Carlos de Bariloche
+                  </span>
+                </div>
               </li>
 
               <li className="flex items-center gap-3">
