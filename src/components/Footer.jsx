@@ -63,11 +63,6 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-xs font-montserrat uppercase tracking-wider">
               <li>
-                <a href="#ritual" className="hover:text-[#DFB76C] transition-colors">
-                  El Ritual del Buen Vivir
-                </a>
-              </li>
-              <li>
                 <a href="#sommelier" className="hover:text-[#DFB76C] transition-colors">
                   Sommelier de Maridaje
                 </a>
@@ -80,6 +75,11 @@ export default function Footer() {
               <li>
                 <a href="#experiencias" className="hover:text-[#DFB76C] transition-colors">
                   Ritual de Copa / Eventos
+                </a>
+              </li>
+              <li>
+                <a href="#ritual" className="hover:text-[#DFB76C] transition-colors">
+                  El Ritual del Buen Vivir
                 </a>
               </li>
               <li>

@@ -15,10 +15,10 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: 'El Ritual', href: '#ritual' },
     { label: 'Sommelier', href: '#sommelier' },
     { label: 'Catálogo', href: '#catalogo' },
     { label: 'Ritual de Copa', href: '#experiencias' },
+    { label: 'El Ritual', href: '#ritual' },
   ];
 
   return (

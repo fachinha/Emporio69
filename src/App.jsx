@@ -23,9 +23,6 @@ export default function App() {
         {/* Hero Section with 3D Floating Habano and Smoke Drift */}
         <Hero />
 
-        {/* El Ritual del Buen Vivir Manifesto */}
-        <BrandStory />
-
         {/* Sommelier Virtual Interactivo */}
         <SommelierVirtual />
 
@@ -34,6 +31,9 @@ export default function App() {
 
         {/* Experiencias: Ritual de Copa & Catas Privadas */}
         <RitualEvents />
+
+        {/* El Ritual del Buen Vivir Manifesto */}
+        <BrandStory />
       </main>
 
       {/* Footer with Patagonia info & IG */}
