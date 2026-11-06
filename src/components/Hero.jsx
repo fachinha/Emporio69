@@ -87,11 +87,11 @@ export default function Hero() {
 
             </div>
 
-            {/* RIGHT COLUMN: Stage & 3D Sealed Luxury Cigar (40% / 5 cols) with entrance scale animation */}
-            <div className="lg:col-span-5 flex flex-col items-center justify-center relative mt-10 lg:mt-0 animate-hero-cigar-enter">
+            {/* RIGHT COLUMN: Stage & 3D Sealed Luxury Cigar (40% / 5 cols) */}
+            <div className="lg:col-span-5 flex flex-col items-center justify-center relative mt-10 lg:mt-0">
               
-              {/* Minimalist Stage Container */}
-              <div className="relative w-full max-w-lg aspect-square flex items-center justify-center perspective-[1200px]">
+              {/* Minimalist Stage Container with entrance scale animation */}
+              <div className="relative w-full max-w-lg aspect-square flex items-center justify-center perspective-[1200px] animate-hero-cigar-enter">
                 
                 {/* 3D Tilted Sealed Cigar in Physical Floating Space (Pure Cutout without circular background) */}
                 <div 

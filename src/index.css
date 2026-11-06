@@ -222,7 +222,7 @@
 @keyframes heroEntranceFadeUp {
   0% {
     opacity: 0;
-    transform: translateY(28px);
+    transform: translateY(32px);
   }
   100% {
     opacity: 1;
@@ -233,7 +233,7 @@
 @keyframes heroCigarScaleEnter {
   0% {
     opacity: 0;
-    transform: scale(0.7) translateY(45px);
+    transform: scale(0.68) translateY(50px);
   }
   65% {
     opacity: 1;
@@ -250,23 +250,24 @@
 }
 
 .animate-hero-title {
-  animation: heroEntranceFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+  animation: heroEntranceFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
 }
 
 .animate-hero-subtitle {
-  animation: heroEntranceFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+  animation: heroEntranceFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
 }
 
 .animate-hero-ctas {
-  animation: heroEntranceFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+  animation: heroEntranceFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.32s both;
 }
 
 .animate-hero-stats {
-  animation: heroEntranceFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.48s both;
+  animation: heroEntranceFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
 }
 
 .animate-hero-cigar-enter {
-  animation: heroCigarScaleEnter 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+  animation: heroCigarScaleEnter 1.25s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
 }
+
 
 
