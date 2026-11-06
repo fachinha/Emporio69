@@ -1,4 +1,4 @@
-﻿export const CATEGORIES = [
+export const CATEGORIES = [
   { id: 'todos', label: 'Todo el Catálogo' },
   { id: 'habanos', label: 'Habanos & Puros' },
   { id: 'destilados', label: 'Destilados & Licores' },
@@ -28,7 +28,7 @@ export const PRODUCTS = [
     strength: 5,
     tag: 'Partida Exclusiva BHK',
     price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/cohiba_behike_54.jpg',
     whatsappMessage: '¡Hola Emporio 69! Quisiera consultar precio y disponibilidad del Cohiba Behike 54 visto en su catálogo.'
   },
   {
@@ -42,7 +42,7 @@ export const PRODUCTS = [
     strength: 4,
     tag: 'Icono Mundial',
     price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/montecristo_no2.jpg',
     whatsappMessage: '¡Hola Emporio 69! Quisiera consultar disponibilidad y cotización de la pirámide Montecristo No. 2.'
   },
   {
@@ -56,7 +56,7 @@ export const PRODUCTS = [
     strength: 5,
     tag: 'Fortaleza Intensa',
     price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/partagas_serie_p2.jpg',
     whatsappMessage: '¡Hola Emporio 69! Me interesa adquirir unidades del Habano Partagás Serie P No. 2.'
   },
   {
@@ -70,7 +70,7 @@ export const PRODUCTS = [
     strength: 3,
     tag: 'Tiro Generoso',
     price: 'Consultar Cava',
-    image: '/assets/cigars_duo.jpg',
+    image: '/assets/products/romeo_wide_churchills.jpg',
     whatsappMessage: '¡Hola! Me interesa consultar por el Romeo y Julieta Wide Churchills de su catálogo de habanos.'
   },
   {
@@ -84,7 +84,7 @@ export const PRODUCTS = [
     strength: 2,
     tag: 'Sutileza & Elegancia',
     price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/hoyo_epicure_no2.jpg',
     whatsappMessage: '¡Hola! Deseo encargar o consultar por el Hoyo de Monterrey Epicure No. 2 de su cava.'
   },
   {
@@ -98,7 +98,7 @@ export const PRODUCTS = [
     strength: 5,
     tag: 'Selección Clásica',
     price: 'Consultar Cava',
-    image: '/assets/hero_cigar.jpg',
+    image: '/assets/products/partagas_serie_d4.jpg',
     whatsappMessage: '¡Hola! Quisiera consultar precio y disponibilidad del Habano Partagás Serie D No. 4.'
   },
   {
@@ -112,7 +112,7 @@ export const PRODUCTS = [
     strength: 4,
     tag: 'Capa Maduro Oscuro',
     price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1516715094483-75da7dee9758?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/joya_cuatro_cinco.jpg',
     whatsappMessage: '¡Hola! Quisiera consultar por el puro Joya de Nicaragua Cuatro Cinco Reserva Especial.'
   },
   {
@@ -126,7 +126,7 @@ export const PRODUCTS = [
     strength: 3,
     tag: 'Capa Habano 2000',
     price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/vegafina_gran_vulcano.jpg',
     whatsappMessage: '¡Hola Emporio 69! Me interesa adquirir unidades del VegaFina Gran Vulcano visto en el catálogo.'
   },
 
@@ -142,7 +142,7 @@ export const PRODUCTS = [
     strength: 4,
     tag: 'Clásico de la Casa',
     price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1527281400683-1aae777175f8?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/chivas_regal_12.jpg',
     whatsappMessage: '¡Hola Emporio 69! Quisiera consultar disponibilidad y precio de Chivas Regal 12 Años.'
   },
   {
@@ -156,7 +156,7 @@ export const PRODUCTS = [
     strength: 5,
     tag: '85 Notas de Sabor',
     price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/chivas_regal_18.jpg',
     whatsappMessage: '¡Hola! Quisiera consultar por la botella de Chivas Regal 18 Años Gold Signature de su cava.'
   },
   {
@@ -170,7 +170,7 @@ export const PRODUCTS = [
     strength: 5,
     tag: 'Ahumado de Turba',
     price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1569529465841-dfecdab7503b?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/lagavulin_islay_malt.jpg',
     whatsappMessage: '¡Hola! Quisiera consultar por el Whisky Single Malt Islay disponible en su cava.'
   },
   {
@@ -184,7 +184,7 @@ export const PRODUCTS = [
     strength: 4,
     tag: 'Triple Barrica',
     price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/ron_solera_gran_reserva.jpg',
     whatsappMessage: '¡Hola! Quisiera averiguar sobre el Ron Solera Gran Reserva que tienen en destilados.'
   },
   {
@@ -198,7 +198,7 @@ export const PRODUCTS = [
     strength: 3,
     tag: 'Destilería Andina',
     price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/gin_artesanal.jpg',
     whatsappMessage: '¡Hola Emporio 69! Quiero saber más sobre el Gin Patagónico de Montaña para maridar.'
   },
   {
@@ -212,7 +212,7 @@ export const PRODUCTS = [
     strength: 5,
     tag: 'Decanter de Cristal',
     price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/cognac_xo_imperial.jpg',
     whatsappMessage: '¡Hola! Deseo consultar precio y detalles de su Cognac XO de guarda.'
   },
 
@@ -229,7 +229,7 @@ export const PRODUCTS = [
     strength: 4,
     tag: 'Malbec de Guarda',
     price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/malbec_gran_reserva.jpg',
     whatsappMessage: '¡Hola Emporio 69! Me interesa consultar por el Malbec Gran Reserva Cava de Altura.'
   },
   {
@@ -244,7 +244,7 @@ export const PRODUCTS = [
     strength: 4,
     tag: 'Malbec Austral',
     price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1547595628-c61a29f496f0?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/malbec_patagonico.jpg',
     whatsappMessage: '¡Hola! Quisiera consultar la etiqueta y añada del Malbec Patagónico Terroir del Viento.'
   },
   {
@@ -259,7 +259,7 @@ export const PRODUCTS = [
     strength: 5,
     tag: 'Cabernet Sauvignon',
     price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1586370434639-0fe43b2d32e6?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/cabernet_sauvignon.jpg',
     whatsappMessage: '¡Hola Emporio 69! Quisiera consultar por el Gran Cabernet Sauvignon Reserva Especial para maridar con habanos.'
   },
   {
@@ -274,7 +274,7 @@ export const PRODUCTS = [
     strength: 4,
     tag: 'Cabernet Franc',
     price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1558001373-7b93ee48ffa0?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/cabernet_franc.jpg',
     whatsappMessage: '¡Hola! Me interesa saber qué etiquetas de Cabernet Franc tienen disponibles en su cava.'
   },
   {
@@ -289,7 +289,7 @@ export const PRODUCTS = [
     strength: 3,
     tag: 'Pinot Noir Austral',
     price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/pinot_noir_patagonia.jpg',
     whatsappMessage: '¡Hola Emporio 69! Quisiera consultar por las botellas de Pinot Noir Patagónico de su cava.'
   },
 
@@ -305,7 +305,7 @@ export const PRODUCTS = [
     strength: 3,
     tag: 'Pieza Única de Autor',
     price: 'Consultar Pieza',
-    image: 'https://images.unsplash.com/photo-1533038590840-1cde6e668a91?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/pipa_brezo_italiano.jpg',
     whatsappMessage: '¡Hola Emporio 69! Me interesa consultar por los modelos de Pipas de Brezo artesanal que tienen en el local.'
   },
   {
@@ -319,7 +319,7 @@ export const PRODUCTS = [
     strength: 3,
     tag: 'Artesanía Nórdica',
     price: 'Consultar Pieza',
-    image: 'https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/pipa_brezo_curva.jpg',
     whatsappMessage: '¡Hola! Quisiera consultar precio de la Pipa Clásica Curva de Brezo danesa.'
   },
   {
@@ -333,7 +333,7 @@ export const PRODUCTS = [
     strength: 4,
     tag: 'Para Fumadores Expertos',
     price: 'Consultar Stock',
-    image: 'https://images.unsplash.com/photo-1528701800487-ba01fea498c0?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/tabaco_pipa_english.jpg',
     whatsappMessage: '¡Hola! Quisiera consultar disponibilidad del Tabaco de Pipa English Mixture en lata de 50g.'
   },
   {
@@ -347,7 +347,7 @@ export const PRODUCTS = [
     strength: 2,
     tag: '100% Sin Conservantes',
     price: 'Consultar Stock',
-    image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/tabaco_armar_virginia.jpg',
     whatsappMessage: '¡Hola! Quisiera consultar por pouches de Tabaco de liar Virginia Rubio natural.'
   },
 
@@ -363,7 +363,7 @@ export const PRODUCTS = [
     strength: 5,
     tag: 'Guarda Óptima 70% HR',
     price: 'Consultar Modelo',
-    image: 'https://images.unsplash.com/photo-1582533561751-ef6f6ab93a2e?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/humidor_cedro_espanol.jpg',
     whatsappMessage: '¡Hola Emporio 69! Me interesa adquirir un Humidor de Cedro Español para mi colección. ¿Me envían fotos y detalles?'
   },
   {
@@ -377,7 +377,7 @@ export const PRODUCTS = [
     strength: 5,
     tag: 'Precisión Milimétrica',
     price: 'Consultar Stock',
-    image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/cortapuros_doble_guillotina.jpg',
     whatsappMessage: '¡Hola! Quisiera consultar por el Cortapuros de Doble Guillotina en acabado oro cepillado.'
   },
   {
@@ -391,7 +391,7 @@ export const PRODUCTS = [
     strength: 5,
     tag: 'Llama Regulable',
     price: 'Consultar Stock',
-    image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/encendedor_torch_jet.jpg',
     whatsappMessage: '¡Hola! Me gustaría comprar el Encendedor Torch Triple Llama Jet visto en la web de Emporio 69.'
   },
   {
@@ -405,7 +405,7 @@ export const PRODUCTS = [
     strength: 5,
     tag: 'Cuero Genuino Hecho a Mano',
     price: 'Consultar Stock',
-    image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/estuche_cuero_habanos.jpg',
     whatsappMessage: '¡Hola Emporio 69! Quisiera consultar por el Estuche de Cuero para 3 puros de viaje.'
   },
   {
@@ -419,7 +419,7 @@ export const PRODUCTS = [
     strength: 5,
     tag: 'Pieza de Salón VIP',
     price: 'Consultar Stock',
-    image: 'https://images.unsplash.com/photo-1620619767323-b95a89183081?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/cenicero_habanos.jpg',
     whatsappMessage: '¡Hola! Me gustaría consultar por el Cenicero de Cristal y Oro para salón visto en la web.'
   }
 ];
