@@ -1,35 +1,44 @@
 ﻿export const CATEGORIES = [
   { id: 'todos', label: 'Todo el Catálogo' },
   { id: 'habanos', label: 'Habanos & Puros' },
-  { id: 'destilados', label: 'Destilados & Vinos' },
-  { id: 'tabacos', label: 'Tabacos de Armar & Pipas' },
-  { id: 'accesorios', label: 'Accesorios de Lujo' },
+  { id: 'destilados', label: 'Destilados & Licores' },
+  { id: 'vinos', label: 'Vinos de Cava' },
+  { id: 'tabacos', label: 'Tabacos & Pipas' },
+  { id: 'accesorios', label: 'Accesorios' },
+];
+
+export const WINE_VARIETIES = [
+  { id: 'todos', label: 'Todas las Cepas' },
+  { id: 'malbec', label: 'Malbec' },
+  { id: 'cabernet-sauvignon', label: 'Cabernet Sauvignon' },
+  { id: 'cabernet-franc', label: 'Cabernet Franc' },
+  { id: 'pinot-noir', label: 'Pinot Noir' },
 ];
 
 export const PRODUCTS = [
   // --- HABANOS & PUROS ---
   {
-    id: 'habano-1',
+    id: 'habano-behike-54',
     category: 'habanos',
-    name: 'Partagás Serie D No. 4',
-    vitola: 'Robusto (124 mm × 50)',
+    name: 'Cohiba Behike 54 (BHK 54)',
+    vitola: 'Laguito No. 5 (144 mm × 54)',
     origin: 'Cuba',
     originFlag: '🇨🇺',
-    aroma: 'Madera de roble, cuero viejo, tierra húmeda y pimienta noble.',
+    aroma: 'Madera noble de cedro, cuero maduro, café tostado, hoja medio tiempo y especias cálidas.',
     strength: 5,
-    tag: 'Selección de la Casa',
+    tag: 'Partida Exclusiva BHK',
     price: 'Consultar Cava',
-    image: '/assets/hero_cigar.jpg',
-    whatsappMessage: '¡Hola! Quisiera consultar precio y disponibilidad del Habano Partagás Serie D No. 4 visto en su catálogo web.'
+    image: 'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=800&q=80',
+    whatsappMessage: '¡Hola Emporio 69! Quisiera consultar precio y disponibilidad del Cohiba Behike 54 visto en su catálogo.'
   },
   {
-    id: 'habano-2',
+    id: 'habano-montecristo-2',
     category: 'habanos',
     name: 'Montecristo No. 2',
     vitola: 'Pirámide Torpedo (156 mm × 52)',
     origin: 'Cuba',
     originFlag: '🇨🇺',
-    aroma: 'Canela, café tostado, especias cálidas y nuez moscada.',
+    aroma: 'Canela, café espresso tostado, especias cálidas, cacao amargo y nuez moscada.',
     strength: 4,
     tag: 'Icono Mundial',
     price: 'Consultar Cava',
@@ -37,13 +46,27 @@ export const PRODUCTS = [
     whatsappMessage: '¡Hola Emporio 69! Quisiera consultar disponibilidad y cotización de la pirámide Montecristo No. 2.'
   },
   {
-    id: 'habano-3',
+    id: 'habano-partagas-p2',
+    category: 'habanos',
+    name: 'Partagás Serie P No. 2',
+    vitola: 'Pirámide (156 mm × 52)',
+    origin: 'Cuba',
+    originFlag: '🇨🇺',
+    aroma: 'Tierra fértil de Vuelta Abajo, cuero curtido, pimienta negra y madera de cedro español.',
+    strength: 5,
+    tag: 'Fortaleza Intensa',
+    price: 'Consultar Cava',
+    image: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80',
+    whatsappMessage: '¡Hola Emporio 69! Me interesa adquirir unidades del Habano Partagás Serie P No. 2.'
+  },
+  {
+    id: 'habano-romeo-wide',
     category: 'habanos',
     name: 'Romeo y Julieta Wide Churchills',
     vitola: 'Montesco (130 mm × 55)',
     origin: 'Cuba',
     originFlag: '🇨🇺',
-    aroma: 'Vainilla suave, cacao puro, cedro tostado y fondo meloso.',
+    aroma: 'Vainilla suave, cacao puro, cedro tostado y fondo meloso de frutos secos.',
     strength: 3,
     tag: 'Tiro Generoso',
     price: 'Consultar Cava',
@@ -51,35 +74,35 @@ export const PRODUCTS = [
     whatsappMessage: '¡Hola! Me interesa consultar por el Romeo y Julieta Wide Churchills de su catálogo de habanos.'
   },
   {
-    id: 'habano-4',
-    category: 'habanos',
-    name: 'Cohiba Siglo VI Gran Corona',
-    vitola: 'Cañonazo (150 mm × 52)',
-    origin: 'Cuba',
-    originFlag: '🇨🇺',
-    aroma: 'Hierba fresca, madera de cedro, miel silvestre y toque sutil de cuero.',
-    strength: 4,
-    tag: 'Cava de Colección',
-    price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=800&q=80',
-    whatsappMessage: '¡Hola Emporio 69! Quisiera averiguar por unidades disponibles de Cohiba Siglo VI.'
-  },
-  {
-    id: 'habano-5',
+    id: 'habano-hoyo-epicure-2',
     category: 'habanos',
     name: 'Hoyo de Monterrey Epicure No. 2',
     vitola: 'Robusto (124 mm × 50)',
     origin: 'Cuba',
     originFlag: '🇨🇺',
-    aroma: 'Flores secas, mantequilla, almendras dulces y cedro claro.',
+    aroma: 'Flores secas, mantequilla, almendras dulces, canela suave y cedro claro.',
     strength: 2,
     tag: 'Sutileza & Elegancia',
     price: 'Consultar Cava',
     image: 'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=800&q=80',
-    whatsappMessage: '¡Hola! Deseo encargar o consultar por el Hoyo de Monterrey Epicure No. 2 que tienen publicado en la web.'
+    whatsappMessage: '¡Hola! Deseo encargar o consultar por el Hoyo de Monterrey Epicure No. 2 de su cava.'
   },
   {
-    id: 'habano-6',
+    id: 'habano-partagas-d4',
+    category: 'habanos',
+    name: 'Partagás Serie D No. 4',
+    vitola: 'Robusto (124 mm × 50)',
+    origin: 'Cuba',
+    originFlag: '🇨🇺',
+    aroma: 'Madera de roble, cuero viejo, tierra húmeda y pimienta noble.',
+    strength: 5,
+    tag: 'Selección Clásica',
+    price: 'Consultar Cava',
+    image: '/assets/hero_cigar.jpg',
+    whatsappMessage: '¡Hola! Quisiera consultar precio y disponibilidad del Habano Partagás Serie D No. 4.'
+  },
+  {
+    id: 'habano-joya-45',
     category: 'habanos',
     name: 'Joya de Nicaragua Cuatro Cinco Reserva',
     vitola: 'Toro (152 mm × 52)',
@@ -93,7 +116,7 @@ export const PRODUCTS = [
     whatsappMessage: '¡Hola! Quisiera consultar por el puro Joya de Nicaragua Cuatro Cinco Reserva Especial.'
   },
   {
-    id: 'habano-7',
+    id: 'habano-vegafina',
     category: 'habanos',
     name: 'VegaFina Nicaragua Gran Vulcano',
     vitola: 'Robusto Extra (127 mm × 54)',
@@ -106,38 +129,52 @@ export const PRODUCTS = [
     image: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80',
     whatsappMessage: '¡Hola Emporio 69! Me interesa adquirir unidades del VegaFina Gran Vulcano visto en el catálogo.'
   },
-  {
-    id: 'habano-8',
-    category: 'habanos',
-    name: 'Trinidad Vigia Selección de Autor',
-    vitola: 'Torres (110 mm × 54)',
-    origin: 'Cuba',
-    originFlag: '🇨🇺',
-    aroma: 'Madera fina, nueces tostadas, cardamomo y cremosidad envolvente.',
-    strength: 3,
-    tag: 'Vitola Exclusiva',
-    price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80',
-    whatsappMessage: '¡Hola Emporio 69! Quisiera consultar disponibilidad y precio del Trinidad Vigia.'
-  },
 
-  // --- DESTILADOS & VINOS DE GUARDA ---
+  // --- DESTILADOS & LICORES ---
   {
-    id: 'dest-1',
+    id: 'dest-chivas-12',
+    category: 'destilados',
+    name: 'Chivas Regal 12 Años Blended Scotch Whisky',
+    vitola: '750ml / 40% ABV',
+    origin: 'Speyside, Escocia',
+    originFlag: '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+    aroma: 'Manzanas silvestres maduras, miel de brezo, vainilla cremosa, avellanas y fondo ahumado suave.',
+    strength: 4,
+    tag: 'Clásico de la Casa',
+    price: 'Consultar Cava',
+    image: 'https://images.unsplash.com/photo-1527281400683-1aae777175f8?auto=format&fit=crop&w=800&q=80',
+    whatsappMessage: '¡Hola Emporio 69! Quisiera consultar disponibilidad y precio de Chivas Regal 12 Años.'
+  },
+  {
+    id: 'dest-chivas-18',
+    category: 'destilados',
+    name: 'Chivas Regal 18 Años Gold Signature',
+    vitola: '750ml / 40% ABV',
+    origin: 'Escocia',
+    originFlag: '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+    aroma: 'Chocolate amargo, higos confitados, cáscara de naranja flambeada, especias dulces y humo elegante.',
+    strength: 5,
+    tag: '85 Notas de Sabor',
+    price: 'Consultar Cava',
+    image: 'https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?auto=format&fit=crop&w=800&q=80',
+    whatsappMessage: '¡Hola! Quisiera consultar por la botella de Chivas Regal 18 Años Gold Signature de su cava.'
+  },
+  {
+    id: 'dest-islay-malt',
     category: 'destilados',
     name: 'Whisky Single Malt Islay Peated 12 Años',
     vitola: '700ml / 46% ABV',
-    origin: 'Escocia',
+    origin: 'Islay, Escocia',
     originFlag: '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
     aroma: 'Turba ahumada intensa, salinidad atlántica, cítricos y yodo medicinal.',
     strength: 5,
-    tag: 'Guarda en Barrica',
+    tag: 'Ahumado de Turba',
     price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1527281400683-1aae777175f8?auto=format&fit=crop&w=800&q=80',
-    whatsappMessage: '¡Hola! Quisiera consultar por las botellas de Whisky Single Malt Islay disponibles en su cava de Emporio 69.'
+    image: 'https://images.unsplash.com/photo-1569529465841-dfecdab7503b?auto=format&fit=crop&w=800&q=80',
+    whatsappMessage: '¡Hola! Quisiera consultar por el Whisky Single Malt Islay disponible en su cava.'
   },
   {
-    id: 'dest-2',
+    id: 'dest-ron-solera',
     category: 'destilados',
     name: 'Ron Solera Gran Reserva 18 Años',
     vitola: '750ml / 40% ABV',
@@ -148,10 +185,10 @@ export const PRODUCTS = [
     tag: 'Triple Barrica',
     price: 'Consultar Cava',
     image: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80',
-    whatsappMessage: '¡Hola! Quisiera averiguar sobre el Ron Solera Gran Reserva que figura en su selección de destilados.'
+    whatsappMessage: '¡Hola! Quisiera averiguar sobre el Ron Solera Gran Reserva que tienen en destilados.'
   },
   {
-    id: 'dest-3',
+    id: 'dest-gin-patagonia',
     category: 'destilados',
     name: 'Gin Patagónico de Montaña & Enhebro Silvestre',
     vitola: '500ml / 43% ABV',
@@ -162,38 +199,10 @@ export const PRODUCTS = [
     tag: 'Destilería Andina',
     price: 'Consultar Cava',
     image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80',
-    whatsappMessage: '¡Hola Emporio 69! Quiero saber más sobre el Gin Patagónico de Autor para maridaje.'
+    whatsappMessage: '¡Hola Emporio 69! Quiero saber más sobre el Gin Patagónico de Montaña para maridar.'
   },
   {
-    id: 'dest-4',
-    category: 'destilados',
-    name: 'Malbec Gran Reserva de Guarda',
-    vitola: '750ml / Cosecha Seleccionada',
-    origin: 'Patagonia / Mendoza',
-    originFlag: '🇦🇷',
-    aroma: 'Ciruela negra madura, cuero, cacao, pimienta negra y grafito mineral.',
-    strength: 4,
-    tag: 'Cava de Colección',
-    price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80',
-    whatsappMessage: '¡Hola! Quisiera consultar la etiqueta y añada actual del Malbec Gran Reserva para maridar con habanos.'
-  },
-  {
-    id: 'dest-5',
-    category: 'destilados',
-    name: 'Bourbon Small Batch Vintage Cask',
-    vitola: '750ml / 45% ABV',
-    origin: 'Kentucky, USA',
-    originFlag: '🇺🇸',
-    aroma: 'Vainilla cremosa, roble blanco tostado, maíz dulce y especias de centeno.',
-    strength: 4,
-    tag: 'Roble Americano Quemado',
-    price: 'Consultar Cava',
-    image: 'https://images.unsplash.com/photo-1569529465841-dfecdab7503b?auto=format&fit=crop&w=800&q=80',
-    whatsappMessage: '¡Hola Emporio 69! Me interesa adquirir una botella de Bourbon Small Batch de su cava.'
-  },
-  {
-    id: 'dest-6',
+    id: 'dest-cognac-xo',
     category: 'destilados',
     name: 'Cognac XO Grande Champagne Imperial',
     vitola: '700ml / 40% ABV',
@@ -205,6 +214,83 @@ export const PRODUCTS = [
     price: 'Consultar Cava',
     image: 'https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&w=800&q=80',
     whatsappMessage: '¡Hola! Deseo consultar precio y detalles de su Cognac XO de guarda.'
+  },
+
+  // --- VINOS DE CAVA ---
+  {
+    id: 'vino-malbec-gran-reserva',
+    category: 'vinos',
+    variety: 'malbec',
+    name: 'Malbec Gran Reserva Cava de Altura',
+    vitola: '750ml / 18 Meses en Roble Francés',
+    origin: 'Mendoza / Patagonia',
+    originFlag: '🇦🇷',
+    aroma: 'Ciruelas negras maduras, violetas silvestres, chocolate amargo, pimienta negra y grafito mineral.',
+    strength: 4,
+    tag: 'Malbec de Guarda',
+    price: 'Consultar Cava',
+    image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80',
+    whatsappMessage: '¡Hola Emporio 69! Me interesa consultar por el Malbec Gran Reserva Cava de Altura.'
+  },
+  {
+    id: 'vino-malbec-patagonia',
+    category: 'vinos',
+    variety: 'malbec',
+    name: 'Malbec Patagónico Terroir del Viento',
+    vitola: '750ml / Cosecha Seleccionada',
+    origin: 'Alto Valle de Río Negro',
+    originFlag: '🇦🇷',
+    aroma: 'Frutos negros del bosque, sutil nota balsámica, eucalipto cordillerano y taninos redondos pulidos por el frío.',
+    strength: 4,
+    tag: 'Malbec Austral',
+    price: 'Consultar Cava',
+    image: 'https://images.unsplash.com/photo-1547595628-c61a29f496f0?auto=format&fit=crop&w=800&q=80',
+    whatsappMessage: '¡Hola! Quisiera consultar la etiqueta y añada del Malbec Patagónico Terroir del Viento.'
+  },
+  {
+    id: 'vino-cabernet-sauvignon',
+    category: 'vinos',
+    variety: 'cabernet-sauvignon',
+    name: 'Gran Cabernet Sauvignon Reserva Especial',
+    vitola: '750ml / 24 Meses en Barrica',
+    origin: 'Luján de Cuyo / Patagonia',
+    originFlag: '🇦🇷',
+    aroma: 'Cassis intenso, grosellas negras, pimiento rojo asado, cedro especiado y estructura potente de gran longevidad.',
+    strength: 5,
+    tag: 'Cabernet Sauvignon',
+    price: 'Consultar Cava',
+    image: 'https://images.unsplash.com/photo-1586370434639-0fe43b2d32e6?auto=format&fit=crop&w=800&q=80',
+    whatsappMessage: '¡Hola Emporio 69! Quisiera consultar por el Gran Cabernet Sauvignon Reserva Especial para maridar con habanos.'
+  },
+  {
+    id: 'vino-cabernet-franc',
+    category: 'vinos',
+    variety: 'cabernet-franc',
+    name: 'Cabernet Franc Selección de Altura & Parcela',
+    vitola: '750ml / Vinificación en Ovoides',
+    origin: 'Valle de Uco',
+    originFlag: '🇦🇷',
+    aroma: 'Especias finas, notas herbales de jarilla andina, frambuesa silvestre, tiza mineral y final fresco muy elegante.',
+    strength: 4,
+    tag: 'Cabernet Franc',
+    price: 'Consultar Cava',
+    image: 'https://images.unsplash.com/photo-1558001373-7b93ee48ffa0?auto=format&fit=crop&w=800&q=80',
+    whatsappMessage: '¡Hola! Me interesa saber qué etiquetas de Cabernet Franc tienen disponibles en su cava.'
+  },
+  {
+    id: 'vino-pinot-noir',
+    category: 'vinos',
+    variety: 'pinot-noir',
+    name: 'Pinot Noir Patagónico Clima Frío',
+    vitola: '750ml / Viñedos de Estepa',
+    origin: 'San Patricio del Chañar / Río Negro',
+    originFlag: '🇦🇷',
+    aroma: 'Cerezas ácidas, hongos de pino, pétalos de rosa seca, tierra húmeda andina y textura sedosa en boca.',
+    strength: 3,
+    tag: 'Pinot Noir Austral',
+    price: 'Consultar Cava',
+    image: 'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=80',
+    whatsappMessage: '¡Hola Emporio 69! Quisiera consultar por las botellas de Pinot Noir Patagónico de su cava.'
   },
 
   // --- TABACOS DE ARMAR & PIPAS ---

@@ -4,7 +4,7 @@ import { SPIRITS_PAIRINGS } from '../data/pairingsData';
 import { buildWhatsAppUrl } from '../utils/whatsapp';
 
 export default function SommelierVirtual() {
-  const [selectedId, setSelectedId] = useState('whisky');
+  const [selectedId, setSelectedId] = useState('chivas');
 
   const currentPairing = SPIRITS_PAIRINGS.find(p => p.id === selectedId) || SPIRITS_PAIRINGS[0];
 

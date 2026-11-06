@@ -1,22 +1,36 @@
 import React, { useState, useMemo } from 'react';
-import { Search, MessageCircle } from 'lucide-react';
-import { CATEGORIES, PRODUCTS } from '../data/catalogData';
+import { Search, MessageCircle, Wine } from 'lucide-react';
+import { CATEGORIES, WINE_VARIETIES, PRODUCTS } from '../data/catalogData';
 import { buildWhatsAppUrl } from '../utils/whatsapp';
 
 export default function Catalog() {
   const [activeCategory, setActiveCategory] = useState('todos');
+  const [selectedWineVariety, setSelectedWineVariety] = useState('todos');
   const [searchQuery, setSearchQuery] = useState('');
+
+  const handleCategoryChange = (catId) => {
+    setActiveCategory(catId);
+    if (catId !== 'vinos') {
+      setSelectedWineVariety('todos');
+    }
+  };
 
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter((item) => {
       const matchesCategory = activeCategory === 'todos' || item.category === activeCategory;
+      const matchesWineVariety = 
+        activeCategory !== 'vinos' || 
+        selectedWineVariety === 'todos' || 
+        item.variety === selectedWineVariety;
       const matchesSearch = 
         item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.origin.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.aroma.toLowerCase().includes(searchQuery.toLowerCase());
-      return matchesCategory && matchesSearch;
+        item.aroma.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (item.variety && item.variety.toLowerCase().includes(searchQuery.toLowerCase())) ||
+        (item.tag && item.tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      return matchesCategory && matchesWineVariety && matchesSearch;
     });
-  }, [activeCategory, searchQuery]);
+  }, [activeCategory, selectedWineVariety, searchQuery]);
 
   return (
     <section id="catalogo" className="relative py-24 sm:py-28 bg-[#0E1726]/60 border-t border-[#C89D54]/15">
@@ -26,53 +40,91 @@ export default function Catalog() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header (Clean Minimalist without badge) */}
+        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-[#F4F4F6] tracking-tight mb-4">
             Catálogo <span className="text-gold-gradient">Seleccionado</span>
           </h2>
 
           <p className="text-sm sm:text-base text-[#9BA3B0] font-sans leading-relaxed">
-            Habanos de las vegas cubanas más veneradas, destilados de guarda, tabacos aromáticos y piezas de precisión orfebril. Cada producto cuenta con garantía de origen y conservación óptima en nuestro humidor de cedro.
+            Habanos de las vegas cubanas más veneradas, destilados de guarda, vinos de autor, tabacos aromáticos y piezas de precisión orfebril. Conservación óptima garantizada.
           </p>
         </div>
 
-        {/* Floating Category Selector Bar & Search (Generously Spaced & Polished) */}
-        <div className="my-10 p-2 sm:p-3 rounded-2xl bg-[#111C2D]/90 border border-[#C89D54]/25 shadow-[0_12px_40px_rgba(0,0,0,0.5)] backdrop-blur-xl flex flex-col md:flex-row items-center justify-between gap-4">
+        {/* Categories Control Hub (Visible Grid/Wrap without hidden horizontal scrolling) */}
+        <div className="my-8 p-4 sm:p-6 rounded-3xl bg-[#111C2D]/90 border border-[#C89D54]/25 shadow-[0_16px_40px_rgba(0,0,0,0.5)] backdrop-blur-xl flex flex-col items-center">
           
-          {/* Category Tabs */}
-          <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-0 scrollbar-none px-1">
+          {/* Main Category Buttons (Clean Wrap, 100% visible) */}
+          <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3.5 w-full">
             {CATEGORIES.map((cat) => {
               const isActive = activeCategory === cat.id;
               return (
                 <button
                   key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
-                  className={`flex-shrink-0 px-5 py-2.5 rounded-xl font-montserrat text-xs tracking-wider uppercase font-semibold transition-all duration-300 ${
+                  onClick={() => handleCategoryChange(cat.id)}
+                  className={`px-4 sm:px-5 py-2.5 rounded-full font-montserrat text-xs tracking-wider uppercase font-semibold transition-all duration-300 flex items-center gap-2 ${
                     isActive
-                      ? 'bg-gold-gradient text-[#0A111C] shadow-gold-glow scale-[1.02]'
-                      : 'bg-[#0A111C]/60 text-[#9BA3B0] border border-white/5 hover:border-[#DFB76C]/40 hover:text-white hover:bg-[#0A111C]'
+                      ? 'bg-gold-gradient text-[#0A111C] shadow-gold-glow scale-[1.03] font-bold'
+                      : 'bg-[#0A111C]/70 text-[#9BA3B0] border border-[#C89D54]/20 hover:border-[#DFB76C]/60 hover:text-white hover:bg-[#0A111C]'
                   }`}
                 >
-                  {cat.label}
+                  {cat.id === 'vinos' && <Wine className="w-3.5 h-3.5" />}
+                  <span>{cat.label}</span>
                 </button>
               );
             })}
           </div>
 
-          {/* Search Input */}
-          <div className="relative w-full md:w-72 px-1">
+          {/* Expandable Wine Varieties Section (Appears when Vinos is selected) */}
+          {activeCategory === 'vinos' && (
+            <div className="w-full pt-5 mt-5 border-t border-[#C89D54]/20 flex flex-col items-center gap-3 animate-[heroEntranceFadeUp_0.4s_ease-out]">
+              <div className="flex items-center gap-2 text-xs font-montserrat text-[#DFB76C] uppercase tracking-[0.2em] font-semibold">
+                <Wine className="w-4 h-4 text-[#DFB76C]" />
+                <span>Varietales en Cava: Malbec, Cabernet, Franc & Pinot Noir</span>
+              </div>
+              <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5">
+                {WINE_VARIETIES.map((variety) => {
+                  const isVarActive = selectedWineVariety === variety.id;
+                  return (
+                    <button
+                      key={variety.id}
+                      onClick={() => setSelectedWineVariety(variety.id)}
+                      className={`px-4 py-1.5 rounded-full text-xs font-montserrat tracking-wider uppercase transition-all duration-300 ${
+                        isVarActive
+                          ? 'bg-[#DFB76C] text-[#0A111C] font-bold shadow-[0_0_15px_rgba(223,183,108,0.4)] scale-105'
+                          : 'bg-[#0A111C]/80 text-[#9BA3B0] border border-[#C89D54]/25 hover:border-[#DFB76C]/60 hover:text-white'
+                      }`}
+                    >
+                      {variety.label}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Search Bar Placed Below the Categories Selector */}
+          <div className="mt-5 w-full max-w-lg relative">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#C89D54]" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Buscar vitola, origen, aroma..."
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#0A111C]/90 border border-[#C89D54]/30 text-xs text-[#F4F4F6] placeholder-[#9BA3B0]/60 focus:outline-none focus:border-[#DFB76C] focus:ring-1 focus:ring-[#DFB76C] transition-all font-sans"
+              placeholder="Buscar vitola, etiqueta, cepa o aroma..."
+              className="w-full pl-11 pr-10 py-3 rounded-full bg-[#0A111C]/90 border border-[#C89D54]/30 text-xs sm:text-sm text-[#F4F4F6] placeholder-[#9BA3B0]/60 focus:outline-none focus:border-[#DFB76C] focus:ring-1 focus:ring-[#DFB76C] transition-all font-sans shadow-inner"
             />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery('')}
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-xs text-[#9BA3B0] hover:text-white px-2 py-0.5 rounded-full bg-white/10"
+              >
+                ✕
+              </button>
+            )}
           </div>
 
         </div>
+
 
         {/* Products Grid */}
         {filteredProducts.length > 0 ? (
@@ -158,7 +210,7 @@ export default function Catalog() {
             <p className="font-serif text-xl text-[#F4F4F6] mb-2">No se encontraron productos coincidentes</p>
             <p className="text-xs text-[#9BA3B0] font-sans mb-4">Intenta ajustar tu búsqueda o explorar otra categoría.</p>
             <button
-              onClick={() => { setActiveCategory('todos'); setSearchQuery(''); }}
+              onClick={() => { setActiveCategory('todos'); setSelectedWineVariety('todos'); setSearchQuery(''); }}
               className="px-5 py-2 text-xs font-montserrat uppercase rounded-lg bg-gold-gradient text-[#0A111C] font-bold"
             >
               Ver Todo el Catálogo

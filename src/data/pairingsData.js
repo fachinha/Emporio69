@@ -1,5 +1,25 @@
 export const SPIRITS_PAIRINGS = [
   {
+    id: 'chivas',
+    spiritName: 'Chivas Regal Scotch',
+    spiritCategory: 'Speyside Blended Scotch',
+    spiritDescription: 'Notas de miel de brezo, manzanas silvestres maduras, avellanas tostadas, vainilla cremosa y un halo ahumado suave.',
+    spiritBadge: 'Elegancia & Suavidad Escocesa',
+    recommendedCigar: {
+      brand: 'Partagás / Cohiba',
+      vitola: 'Partagás Serie P No. 2 & Cohiba Behike 54',
+      origin: 'Vuelta Abajo, Cuba',
+      strength: 5,
+      strengthLabel: 'Intensa y Compleja',
+      lengthRing: '156 mm × Cepo 52',
+      smokingTime: '60 - 75 min',
+      tastingNotes: ['Miel de bosque', 'Cuero añejo', 'Café espresso', 'Cedro español', 'Cacao oscuro'],
+      pairingRationale: 'La redondez aterciopelada y las notas frutales y acarameladas de Chivas Regal envuelven la potencia del tabaco cubano sin opacarlo. Cada trago limpia el paladar realzando la cremosidad y el tiro generoso de la pirámide.',
+      sommelierTip: 'Disfrutar en vaso bajo tipo Old Fashioned con una roca grande de hielo transparente para mantener la temperatura sin diluir el blend.',
+      whatsappMessage: '¡Hola Emporio 69! Me interesa consultar por el maridaje de Chivas Regal con Partagás Serie P No. 2 / Cohiba Behike 54 visto en su Sommelier Virtual.'
+    }
+  },
+  {
     id: 'whisky',
     spiritName: 'Whisky Single Malt & Ahumado',
     spiritCategory: 'Islay & Highland Scotch',
