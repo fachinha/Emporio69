@@ -216,6 +216,15 @@
   50% { transform: translate(3px, -3px); }
 }
 
+@keyframes chevronbob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
+.btn-gold-kiur .btn-icon-down {
+  animation: chevronbob 1.8s ease-in-out infinite;
+}
+
 /* ==========================================
    PAGE ENTRANCE ANIMATIONS (ESTILO COTILLON)
    ========================================== */

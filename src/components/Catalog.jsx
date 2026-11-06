@@ -230,16 +230,18 @@ export default function Catalog() {
 
             {/* Load More Button */}
             {hasMore && (
-              <div className="mt-12 flex justify-center">
+              <div className="mt-14 flex justify-center">
                 <button
                   onClick={() => setVisibleCount((prev) => prev + 15)}
-                  className="group inline-flex items-center gap-3 px-8 py-3.5 rounded-full border border-[#C89D54]/50 hover:border-[#DFB76C] bg-[#111C2D]/90 hover:bg-[#C89D54]/20 text-[#DFB76C] hover:text-white font-montserrat font-bold text-xs tracking-wider uppercase transition-all duration-300 shadow-lg hover:shadow-gold-glow cursor-pointer scale-100 hover:scale-[1.02]"
+                  className="btn-gold-kiur group cursor-pointer flex items-center gap-3.5 tracking-wider"
                 >
                   <span>Ver Más Productos</span>
-                  <span className="text-[10px] px-2.5 py-0.5 rounded-full bg-[#C89D54]/20 border border-[#C89D54]/40 text-[#DFB76C] group-hover:text-white">
+                  <span className="text-[10px] px-2.5 py-0.5 rounded-full bg-[#0A111C] border border-[#C89D54]/50 text-[#DFB76C] font-semibold tracking-normal shadow-inner">
                     +{filteredProducts.length - visibleCount} restantes
                   </span>
-                  <ChevronDown className="w-4 h-4 text-[#DFB76C] group-hover:translate-y-0.5 transition-transform duration-300" />
+                  <div className="btn-icon-wrapper btn-icon-down w-7 h-7 rounded-full bg-[#0A111C] text-[#DFB76C] flex items-center justify-center transition-transform duration-300 group-hover:translate-y-1">
+                    <ChevronDown className="w-4 h-4 stroke-[2.5]" />
+                  </div>
                 </button>
               </div>
             )}
