@@ -1,4 +1,4 @@
-export const CATEGORIES = [
+﻿export const CATEGORIES = [
   { id: 'todos', label: 'Todo el Catálogo' },
   { id: 'habanos', label: 'Habanos & Puros' },
   { id: 'destilados', label: 'Destilados & Vinos' },
@@ -18,12 +18,26 @@ export const PRODUCTS = [
     aroma: 'Madera de roble, cuero viejo, tierra húmeda y pimienta noble.',
     strength: 5,
     tag: 'Selección de la Casa',
-    price: 'Consultar Stock',
+    price: 'Consultar Cava',
     image: '/assets/hero_cigar.jpg',
     whatsappMessage: '¡Hola! Quisiera consultar precio y disponibilidad del Habano Partagás Serie D No. 4 visto en su catálogo web.'
   },
   {
     id: 'habano-2',
+    category: 'habanos',
+    name: 'Montecristo No. 2',
+    vitola: 'Pirámide Torpedo (156 mm × 52)',
+    origin: 'Cuba',
+    originFlag: '🇨🇺',
+    aroma: 'Canela, café tostado, especias cálidas y nuez moscada.',
+    strength: 4,
+    tag: 'Icono Mundial',
+    price: 'Consultar Cava',
+    image: 'https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&w=800&q=80',
+    whatsappMessage: '¡Hola Emporio 69! Quisiera consultar disponibilidad y cotización de la pirámide Montecristo No. 2.'
+  },
+  {
+    id: 'habano-3',
     category: 'habanos',
     name: 'Romeo y Julieta Wide Churchills',
     vitola: 'Montesco (130 mm × 55)',
@@ -32,26 +46,26 @@ export const PRODUCTS = [
     aroma: 'Vainilla suave, cacao puro, cedro tostado y fondo meloso.',
     strength: 3,
     tag: 'Tiro Generoso',
-    price: 'Consultar Stock',
+    price: 'Consultar Cava',
     image: '/assets/cigars_duo.jpg',
     whatsappMessage: '¡Hola! Me interesa consultar por el Romeo y Julieta Wide Churchills de su catálogo de habanos.'
   },
   {
-    id: 'habano-3',
+    id: 'habano-4',
     category: 'habanos',
-    name: 'Montecristo No. 2',
-    vitola: 'Pirámide (156 mm × 52)',
+    name: 'Cohiba Siglo VI Gran Corona',
+    vitola: 'Cañonazo (150 mm × 52)',
     origin: 'Cuba',
     originFlag: '🇨🇺',
-    aroma: 'Canela, café tostado, especias cálidas y nuez moscada.',
+    aroma: 'Hierba fresca, madera de cedro, miel silvestre y toque sutil de cuero.',
     strength: 4,
-    tag: 'Icono Mundial',
-    price: 'Consultar Stock',
-    image: '/assets/hero_cigar.jpg',
-    whatsappMessage: '¡Hola Emporio 69! Quisiera consultar disponibilidad y cotización de la pirámide Montecristo No. 2.'
+    tag: 'Cava de Colección',
+    price: 'Consultar Cava',
+    image: 'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=800&q=80',
+    whatsappMessage: '¡Hola Emporio 69! Quisiera averiguar por unidades disponibles de Cohiba Siglo VI.'
   },
   {
-    id: 'habano-4',
+    id: 'habano-5',
     category: 'habanos',
     name: 'Hoyo de Monterrey Epicure No. 2',
     vitola: 'Robusto (124 mm × 50)',
@@ -60,12 +74,12 @@ export const PRODUCTS = [
     aroma: 'Flores secas, mantequilla, almendras dulces y cedro claro.',
     strength: 2,
     tag: 'Sutileza & Elegancia',
-    price: 'Consultar Stock',
-    image: '/assets/cigars_duo.jpg',
+    price: 'Consultar Cava',
+    image: 'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=800&q=80',
     whatsappMessage: '¡Hola! Deseo encargar o consultar por el Hoyo de Monterrey Epicure No. 2 que tienen publicado en la web.'
   },
   {
-    id: 'habano-5',
+    id: 'habano-6',
     category: 'habanos',
     name: 'Joya de Nicaragua Cuatro Cinco Reserva',
     vitola: 'Toro (152 mm × 52)',
@@ -73,27 +87,41 @@ export const PRODUCTS = [
     originFlag: '🇳🇮',
     aroma: 'Cacao amargo, café expreso, pimienta de Estelí y roble añejado.',
     strength: 4,
-    tag: 'Edición Limitada',
-    price: 'Consultar Stock',
-    image: '/assets/hero_cigar.jpg',
+    tag: 'Capa Maduro Oscuro',
+    price: 'Consultar Cava',
+    image: 'https://images.unsplash.com/photo-1516715094483-75da7dee9758?auto=format&fit=crop&w=800&q=80',
     whatsappMessage: '¡Hola! Quisiera consultar por el puro Joya de Nicaragua Cuatro Cinco Reserva Especial.'
   },
   {
-    id: 'habano-6',
+    id: 'habano-7',
     category: 'habanos',
     name: 'VegaFina Nicaragua Gran Vulcano',
     vitola: 'Robusto Extra (127 mm × 54)',
-    origin: 'Rep. Dominicana / Nicaragua',
+    origin: 'Rep. Dominicana',
     originFlag: '🇩🇴',
     aroma: 'Frutos secos caramelizados, clavo de olor, notas de vainilla y cedro.',
     strength: 3,
     tag: 'Capa Habano 2000',
-    price: 'Consultar Stock',
-    image: '/assets/cigars_duo.jpg',
+    price: 'Consultar Cava',
+    image: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80',
     whatsappMessage: '¡Hola Emporio 69! Me interesa adquirir unidades del VegaFina Gran Vulcano visto en el catálogo.'
   },
+  {
+    id: 'habano-8',
+    category: 'habanos',
+    name: 'Trinidad Vigia Selección de Autor',
+    vitola: 'Torres (110 mm × 54)',
+    origin: 'Cuba',
+    originFlag: '🇨🇺',
+    aroma: 'Madera fina, nueces tostadas, cardamomo y cremosidad envolvente.',
+    strength: 3,
+    tag: 'Vitola Exclusiva',
+    price: 'Consultar Cava',
+    image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80',
+    whatsappMessage: '¡Hola Emporio 69! Quisiera consultar disponibilidad y precio del Trinidad Vigia.'
+  },
 
-  // --- DESTILADOS & VINOS ---
+  // --- DESTILADOS & VINOS DE GUARDA ---
   {
     id: 'dest-1',
     category: 'destilados',
@@ -150,24 +178,38 @@ export const PRODUCTS = [
     image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80',
     whatsappMessage: '¡Hola! Quisiera consultar la etiqueta y añada actual del Malbec Gran Reserva para maridar con habanos.'
   },
+  {
+    id: 'dest-5',
+    category: 'destilados',
+    name: 'Bourbon Small Batch Vintage Cask',
+    vitola: '750ml / 45% ABV',
+    origin: 'Kentucky, USA',
+    originFlag: '🇺🇸',
+    aroma: 'Vainilla cremosa, roble blanco tostado, maíz dulce y especias de centeno.',
+    strength: 4,
+    tag: 'Roble Americano Quemado',
+    price: 'Consultar Cava',
+    image: 'https://images.unsplash.com/photo-1569529465841-dfecdab7503b?auto=format&fit=crop&w=800&q=80',
+    whatsappMessage: '¡Hola Emporio 69! Me interesa adquirir una botella de Bourbon Small Batch de su cava.'
+  },
+  {
+    id: 'dest-6',
+    category: 'destilados',
+    name: 'Cognac XO Grande Champagne Imperial',
+    vitola: '700ml / 40% ABV',
+    origin: 'Francia',
+    originFlag: '🇫🇷',
+    aroma: 'Frutas confitadas, azafrán, frutos secos y largo postgusto aterciopelado.',
+    strength: 5,
+    tag: 'Decanter de Cristal',
+    price: 'Consultar Cava',
+    image: 'https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&w=800&q=80',
+    whatsappMessage: '¡Hola! Deseo consultar precio y detalles de su Cognac XO de guarda.'
+  },
 
   // --- TABACOS DE ARMAR & PIPAS ---
   {
     id: 'tab-1',
-    category: 'tabacos',
-    name: 'Tabaco de Pipa English Mixture Original',
-    vitola: 'Lata 50g con sello al vacío',
-    origin: 'Inglaterra',
-    originFlag: '🇬🇧',
-    aroma: 'Latakia ahumada, Virginia dorado y toque especiado oriental Perique.',
-    strength: 4,
-    tag: 'Para Fumadores Expertos',
-    price: 'Consultar Stock',
-    image: 'https://images.unsplash.com/photo-1528701800487-ba01fea498c0?auto=format&fit=crop&w=800&q=80',
-    whatsappMessage: '¡Hola! Quisiera consultar disponibilidad del Tabaco de Pipa English Mixture en lata de 50g.'
-  },
-  {
-    id: 'tab-2',
     category: 'tabacos',
     name: 'Pipa de Brezo Italiano Tallada a Mano',
     vitola: 'Formato Bent / Boquilla de Ebonita',
@@ -181,17 +223,45 @@ export const PRODUCTS = [
     whatsappMessage: '¡Hola Emporio 69! Me interesa consultar por los modelos de Pipas de Brezo artesanal que tienen en el local.'
   },
   {
+    id: 'tab-2',
+    category: 'tabacos',
+    name: 'Pipa Clásica Curva de Brezo & Boquilla Ámbar',
+    vitola: 'Formato Billiard / Boquilla Acrílica',
+    origin: 'Dinamarca',
+    originFlag: '🇩🇰',
+    aroma: 'Madera de brezo curada con fuego suave, tiro frío y balance anatómico inmejorable.',
+    strength: 3,
+    tag: 'Artesanía Nórdica',
+    price: 'Consultar Pieza',
+    image: 'https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=800&q=80',
+    whatsappMessage: '¡Hola! Quisiera consultar precio de la Pipa Clásica Curva de Brezo danesa.'
+  },
+  {
     id: 'tab-3',
+    category: 'tabacos',
+    name: 'Tabaco de Pipa English Mixture Original',
+    vitola: 'Lata 50g con sello al vacío',
+    origin: 'Inglaterra',
+    originFlag: '🇬🇧',
+    aroma: 'Latakia ahumada, Virginia dorado y toque especiado oriental Perique.',
+    strength: 4,
+    tag: 'Para Fumadores Expertos',
+    price: 'Consultar Stock',
+    image: 'https://images.unsplash.com/photo-1528701800487-ba01fea498c0?auto=format&fit=crop&w=800&q=80',
+    whatsappMessage: '¡Hola! Quisiera consultar disponibilidad del Tabaco de Pipa English Mixture en lata de 50g.'
+  },
+  {
+    id: 'tab-4',
     category: 'tabacos',
     name: 'Tabaco para Armar Virginia Rubio Natural',
     vitola: 'Pouch 40g sin aditivos',
     origin: 'Bélgica / Holanda',
     originFlag: '🇧🇪',
-    aroma: 'Hojas seleccionadas secadas al sol, notas dulces de heno fresco y miel.',
+    aroma: 'Hojas seleccionadas secadas al sol, notas dulces de heno fresco y miel silvestre.',
     strength: 2,
     tag: '100% Sin Conservantes',
     price: 'Consultar Stock',
-    image: 'https://images.unsplash.com/photo-1528701800487-ba01fea498c0?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80',
     whatsappMessage: '¡Hola! Quisiera consultar por pouches de Tabaco de liar Virginia Rubio natural.'
   },
 
@@ -237,5 +307,33 @@ export const PRODUCTS = [
     price: 'Consultar Stock',
     image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80',
     whatsappMessage: '¡Hola! Me gustaría comprar el Encendedor Torch Triple Llama Jet visto en la web de Emporio 69.'
+  },
+  {
+    id: 'acc-4',
+    category: 'accesorios',
+    name: 'Estuche Viajero de Cuero Noble para Habanos',
+    vitola: 'Capacidad para 3 Vitolas (Hasta Cepo 56)',
+    origin: 'Italia',
+    originFlag: '🇮🇹',
+    aroma: 'Cuero curtido vegetal de grano fino, forrado interior en cedro para conservar humedad.',
+    strength: 5,
+    tag: 'Cuero Genuino Hecho a Mano',
+    price: 'Consultar Stock',
+    image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80',
+    whatsappMessage: '¡Hola Emporio 69! Quisiera consultar por el Estuche de Cuero para 3 puros de viaje.'
+  },
+  {
+    id: 'acc-5',
+    category: 'accesorios',
+    name: 'Cenicero Pesado de Cristal & Baño Dorado',
+    vitola: 'Formato Cuadrado con 2 Ranuras para Puros',
+    origin: 'Francia',
+    originFlag: '🇫🇷',
+    aroma: 'Cristal macizo soplado de alto peso con baño de oro perimetral, reposapuros amplio.',
+    strength: 5,
+    tag: 'Pieza de Salón VIP',
+    price: 'Consultar Stock',
+    image: 'https://images.unsplash.com/photo-1620619767323-b95a89183081?auto=format&fit=crop&w=800&q=80',
+    whatsappMessage: '¡Hola! Me gustaría consultar por el Cenicero de Cristal y Oro para salón visto en la web.'
   }
 ];

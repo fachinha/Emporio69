@@ -143,3 +143,130 @@
   animation: spinSlow 50s linear infinite;
 }
 
+/* ==========================================
+   KIURCODE STYLE BUTTON ANIMATION (GOLD EDITION)
+   ========================================== */
+.btn-gold-kiur {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 13px 26px;
+  border-radius: 9999px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  overflow: hidden;
+  isolation: isolate;
+  white-space: nowrap;
+  color: #0A111C;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.45);
+  background: linear-gradient(120deg, #966B24 0%, #C89D54 28%, #FFF0C2 50%, #C89D54 72%, #855C1B 100%);
+  background-size: 220% 100%;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), inset 0 -2px 0 rgba(0, 0, 0, 0.25), 0 10px 30px -8px rgba(200, 157, 84, 0.75);
+  animation: goldflow 4s ease-in-out infinite, goldglow 2.6s ease-in-out infinite;
+  transition: transform 0.25s cubic-bezier(0.2, 0.75, 0.2, 1), box-shadow 0.3s;
+}
+
+.btn-gold-kiur::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 25%, rgba(255, 255, 255, 0.95) 48%, rgba(255, 255, 255, 0.35) 56%, transparent 72%);
+  transform: translateX(-135%);
+  animation: goldwasheen 3.2s ease-in-out infinite;
+  mix-blend-mode: overlay;
+}
+
+.btn-gold-kiur .btn-icon-wrapper {
+  animation: arrowbob 1.8s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.btn-gold-kiur:hover {
+  transform: translateY(-3px) scale(1.025);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 20px 50px -8px rgba(200, 157, 84, 0.95), 0 0 0 4px rgba(200, 157, 84, 0.25);
+}
+
+@keyframes goldflow {
+  50% { background-position: 100% 0; }
+}
+
+@keyframes goldglow {
+  0%, 100% {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), inset 0 -2px 0 rgba(0, 0, 0, 0.2), 0 10px 28px -8px rgba(200, 157, 84, 0.7);
+  }
+  50% {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 -2px 0 rgba(0, 0, 0, 0.2), 0 18px 46px -6px rgba(223, 183, 108, 0.95), 0 0 0 5px rgba(200, 157, 84, 0.22);
+  }
+}
+
+@keyframes goldwasheen {
+  0%, 55% { transform: translateX(-135%); }
+  85%, 100% { transform: translateX(135%); }
+}
+
+@keyframes arrowbob {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(3px, -3px); }
+}
+
+/* ==========================================
+   PAGE ENTRANCE ANIMATIONS (ESTILO COTILLON)
+   ========================================== */
+@keyframes heroEntranceFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroCigarScaleEnter {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) translateY(45px);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(1.03) translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-hero-cursive {
+  animation: heroEntranceFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-hero-title {
+  animation: heroEntranceFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.animate-hero-subtitle {
+  animation: heroEntranceFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+}
+
+.animate-hero-ctas {
+  animation: heroEntranceFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+}
+
+.animate-hero-stats {
+  animation: heroEntranceFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.48s both;
+}
+
+.animate-hero-cigar-enter {
+  animation: heroCigarScaleEnter 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+

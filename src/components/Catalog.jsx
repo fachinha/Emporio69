@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, Filter, MessageCircle, ExternalLink, Sparkles, MapPin } from 'lucide-react';
+import { Search, MessageCircle } from 'lucide-react';
 import { CATEGORIES, PRODUCTS } from '../data/catalogData';
 import { buildWhatsAppUrl } from '../utils/whatsapp';
 
@@ -19,22 +19,15 @@ export default function Catalog() {
   }, [activeCategory, searchQuery]);
 
   return (
-    <section id="catalogo" className="relative py-28 bg-[#0E1726]/60 border-t border-[#C89D54]/15">
+    <section id="catalogo" className="relative py-24 sm:py-28 bg-[#0E1726]/60 border-t border-[#C89D54]/15">
       
       {/* Background accents */}
       <div className="absolute top-1/3 right-10 w-80 h-80 bg-[#C89D54]/5 rounded-full blur-[130px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#C89D54]/30 bg-[#111C2D]/80 backdrop-blur-md mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#DFB76C]" />
-            <span className="font-montserrat text-xs uppercase tracking-[0.25em] text-[#DFB76C] font-semibold">
-              Curaduría Exclusiva
-            </span>
-          </div>
-
+        {/* Section Header (Clean Minimalist without badge) */}
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-[#F4F4F6] tracking-tight mb-4">
             Catálogo <span className="text-gold-gradient">Seleccionado</span>
           </h2>
@@ -44,21 +37,21 @@ export default function Catalog() {
           </p>
         </div>
 
-        {/* Filter Bar & Search */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10 pb-6 border-b border-[#C89D54]/15">
+        {/* Floating Category Selector Bar & Search (Generously Spaced & Polished) */}
+        <div className="my-10 p-2 sm:p-3 rounded-2xl bg-[#111C2D]/90 border border-[#C89D54]/25 shadow-[0_12px_40px_rgba(0,0,0,0.5)] backdrop-blur-xl flex flex-col md:flex-row items-center justify-between gap-4">
           
           {/* Category Tabs */}
-          <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none">
+          <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-0 scrollbar-none px-1">
             {CATEGORIES.map((cat) => {
               const isActive = activeCategory === cat.id;
               return (
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`flex-shrink-0 px-4 py-2 rounded-full font-montserrat text-xs tracking-wider uppercase font-semibold transition-all duration-300 ${
+                  className={`flex-shrink-0 px-5 py-2.5 rounded-xl font-montserrat text-xs tracking-wider uppercase font-semibold transition-all duration-300 ${
                     isActive
-                      ? 'bg-gold-gradient text-[#0A111C] shadow-gold-glow'
-                      : 'bg-[#111C2D]/70 text-[#9BA3B0] border border-white/5 hover:border-[#DFB76C]/40 hover:text-white'
+                      ? 'bg-gold-gradient text-[#0A111C] shadow-gold-glow scale-[1.02]'
+                      : 'bg-[#0A111C]/60 text-[#9BA3B0] border border-white/5 hover:border-[#DFB76C]/40 hover:text-white hover:bg-[#0A111C]'
                   }`}
                 >
                   {cat.label}
@@ -67,15 +60,15 @@ export default function Catalog() {
             })}
           </div>
 
-          {/* Search Input (Pill Shaped inspired by Negro Mercado) */}
-          <div className="relative w-full md:w-72">
+          {/* Search Input */}
+          <div className="relative w-full md:w-72 px-1">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#C89D54]" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Buscar vitola, origen, aroma..."
-              className="w-full pl-10 pr-4 py-2.5 rounded-full bg-[#0A111C]/80 border border-[#C89D54]/25 text-xs text-[#F4F4F6] placeholder-[#9BA3B0]/60 focus:outline-none focus:border-[#DFB76C] focus:ring-1 focus:ring-[#DFB76C] transition-all font-sans"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#0A111C]/90 border border-[#C89D54]/30 text-xs text-[#F4F4F6] placeholder-[#9BA3B0]/60 focus:outline-none focus:border-[#DFB76C] focus:ring-1 focus:ring-[#DFB76C] transition-all font-sans"
             />
           </div>
 
@@ -83,7 +76,7 @@ export default function Catalog() {
 
         {/* Products Grid */}
         {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-6">
             {filteredProducts.map((product) => (
               <div
                 key={product.id}
@@ -173,30 +166,8 @@ export default function Catalog() {
           </div>
         )}
 
-        {/* Global Catalog Footer Notice */}
-        <div className="mt-14 p-6 rounded-2xl bg-[#111C2D]/50 border border-[#C89D54]/20 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-          <div className="flex items-center gap-3">
-            <MapPin className="w-5 h-5 text-[#DFB76C] flex-shrink-0" />
-            <div>
-              <p className="font-serif text-base text-[#F4F4F6] font-bold">
-                ¿Buscas una vitola particular o partida de colección?
-              </p>
-              <p className="text-xs text-[#9BA3B0] font-sans">
-                Contamos con stock rotativo y partidas especiales que ingresan directo de cava. Consúltanos por piezas exclusivas.
-              </p>
-            </div>
-          </div>
-          <a
-            href={buildWhatsAppUrl('¡Hola! Estoy buscando una vitola o destilado especial que no veo en el catálogo online. ¿Podrían asesorarme?')}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-shrink-0 px-6 py-3 rounded-xl border border-[#C89D54] hover:bg-gold-gradient hover:text-[#0A111C] text-[#DFB76C] font-montserrat font-bold text-xs uppercase tracking-wider transition-all duration-300"
-          >
-            Consultar por Pedidos Especiales
-          </a>
-        </div>
-
       </div>
     </section>
   );
 }
+

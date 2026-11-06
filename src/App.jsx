@@ -1,4 +1,5 @@
 import React from 'react';
+import Preloader from './components/Preloader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import BrandStory from './components/BrandStory';
@@ -12,6 +13,9 @@ import WhatsAppFloatingBtn from './components/WhatsAppFloatingBtn';
 export default function App() {
   return (
     <div className="min-h-screen bg-[#0A111C] text-[#F4F4F6] relative selection:bg-[#C89D54]/30 selection:text-[#DFB76C]">
+      {/* Luxury Page Entrance Preloader */}
+      <Preloader />
+
       {/* Age Verification Modal on first visit */}
       <AgeVerificationModal />
 

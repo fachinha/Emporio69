@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MessageCircle, Menu, X, ArrowUpRight } from 'lucide-react';
+import { MessageCircle, Menu, X } from 'lucide-react';
 import { buildWhatsAppUrl } from '../utils/whatsapp';
 
 export default function Navbar() {
@@ -54,20 +54,6 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Right CTA Button (Pill Style inspired by Negro Mercado) */}
-        <div className="hidden sm:flex items-center gap-4">
-          <a
-            href={buildWhatsAppUrl('¡Hola Emporio 69! Quisiera consultar por el catálogo completo de habanos y destilados.')}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-[#C89D54]/50 hover:border-[#DFB76C] bg-[#111C2D]/60 hover:bg-[#C89D54]/15 text-[#F4F4F6] hover:text-[#DFB76C] font-montserrat font-bold text-xs tracking-wider uppercase transition-all duration-300"
-          >
-            <span>Consultar Catálogo</span>
-            <div className="w-6 h-6 rounded-full bg-[#DFB76C] text-[#0A111C] flex items-center justify-center transition-transform duration-300 group-hover:rotate-45">
-              <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5]" />
-            </div>
-          </a>
-        </div>
 
         {/* Mobile Menu Button */}
         <button

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, MessageCircle, ChevronDown } from 'lucide-react';
-import { buildWhatsAppUrl } from '../utils/whatsapp';
+import { ArrowUpRight, ChevronDown } from 'lucide-react';
 
 export default function Hero() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -35,51 +34,41 @@ export default function Hero() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
-            {/* LEFT COLUMN: Minimalist Editorial Content (60% / 7 cols) */}
+            {/* LEFT COLUMN: Minimalist Editorial Content (60% / 7 cols) with staggered load animations */}
             <div className="lg:col-span-7 flex flex-col justify-center text-left">
               
               {/* Elegant script accent above title */}
-              <div className="mb-2">
+              <div className="mb-2 animate-hero-cursive">
                 <span className="font-cursive text-2xl sm:text-3xl text-[#DFB76C] tracking-wide block">
                   Ritual de Buen Vivir
                 </span>
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-serif font-bold text-[#F4F4F6] tracking-tight leading-[0.9] mb-6">
+              <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-serif font-bold text-[#F4F4F6] tracking-tight leading-[0.9] mb-6 animate-hero-title">
                 Emporio <span className="text-gold-gradient">69</span>
               </h1>
 
               {/* Resumed punchy minimalist description */}
-              <p className="text-lg sm:text-xl text-[#9BA3B0] font-sans font-light leading-relaxed max-w-xl mb-10">
+              <p className="text-lg sm:text-xl text-[#9BA3B0] font-sans font-light leading-relaxed max-w-xl mb-10 animate-hero-subtitle">
                 Habanos de guarda, destilados de autor y el placer de detener el tiempo en la Patagonia.
               </p>
 
-              {/* Minimalist Pill CTA Buttons (Inspired by Negro Mercado) */}
-              <div className="flex flex-wrap items-center gap-4">
+              {/* KiurCode Style Golden CTA Button */}
+              <div className="flex flex-wrap items-center gap-4 animate-hero-ctas">
                 <a
                   href="#catalogo"
-                  className="group inline-flex items-center gap-4 pl-7 pr-3 py-3 rounded-full bg-gold-gradient text-[#0A111C] font-montserrat font-bold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 hover:shadow-gold-glow hover:scale-[1.02]"
+                  className="btn-gold-kiur group"
                 >
                   <span>Explorar Catálogo</span>
-                  <div className="w-8 h-8 rounded-full bg-[#0A111C] text-[#DFB76C] flex items-center justify-center transition-transform duration-300 group-hover:rotate-45">
-                    <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
+                  <div className="btn-icon-wrapper w-7 h-7 rounded-full bg-[#0A111C] text-[#DFB76C] flex items-center justify-center transition-transform duration-300 group-hover:rotate-45">
+                    <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5]" />
                   </div>
-                </a>
-
-                <a
-                  href={buildWhatsAppUrl('¡Hola Emporio 69! Quisiera hablar con un especialista sobre su selección.')}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-3 px-6 py-3.5 rounded-full border border-[#C89D54]/40 hover:border-[#DFB76C] bg-transparent hover:bg-[#C89D54]/10 text-[#F4F4F6] hover:text-[#DFB76C] font-montserrat font-semibold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300"
-                >
-                  <MessageCircle className="w-4 h-4 text-[#DFB76C]" />
-                  <span>Hablar con un Especialista</span>
                 </a>
               </div>
 
               {/* Minimalist Footnotes */}
-              <div className="flex items-center gap-8 pt-12 mt-10 border-t border-[#C89D54]/15">
+              <div className="flex items-center gap-8 pt-12 mt-10 border-t border-[#C89D54]/15 animate-hero-stats">
                 <div>
                   <p className="font-serif text-2xl text-[#DFB76C] font-bold">100%</p>
                   <p className="text-[10px] font-montserrat uppercase tracking-widest text-[#9BA3B0]">Habanos de Origen</p>
@@ -98,8 +87,8 @@ export default function Hero() {
 
             </div>
 
-            {/* RIGHT COLUMN: Stage & 3D Sealed Luxury Cigar (40% / 5 cols) */}
-            <div className="lg:col-span-5 flex flex-col items-center justify-center relative mt-10 lg:mt-0">
+            {/* RIGHT COLUMN: Stage & 3D Sealed Luxury Cigar (40% / 5 cols) with entrance scale animation */}
+            <div className="lg:col-span-5 flex flex-col items-center justify-center relative mt-10 lg:mt-0 animate-hero-cigar-enter">
               
               {/* Minimalist Stage Container */}
               <div className="relative w-full max-w-lg aspect-square flex items-center justify-center perspective-[1200px]">
