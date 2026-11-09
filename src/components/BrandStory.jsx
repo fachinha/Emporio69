@@ -38,13 +38,6 @@ export default function BrandStory() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#C89D54]/30 bg-[#111C2D]/80 backdrop-blur-md mb-4">
-            <Compass className="w-3.5 h-3.5 text-[#DFB76C]" />
-            <span className="font-montserrat text-xs uppercase tracking-[0.25em] text-[#DFB76C] font-semibold">
-              Patagonia Argentina
-            </span>
-          </div>
-
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-[#F4F4F6] tracking-tight mb-4">
             Nosotros
           </h2>

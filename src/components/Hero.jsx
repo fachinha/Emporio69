@@ -20,7 +20,7 @@ export default function Hero() {
       <section 
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="relative min-h-[92vh] flex items-center pt-24 pb-12 overflow-hidden bg-[#0A111C]"
+        className="relative min-h-[92vh] flex items-center pt-28 sm:pt-36 pb-12 overflow-hidden bg-[#0A111C]"
       >
         
         {/* Subtle Background Ambience */}
@@ -45,12 +45,12 @@ export default function Hero() {
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-serif font-bold text-[#F4F4F6] tracking-tight leading-[0.9] mb-6 animate-hero-title">
+              <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-serif font-bold text-[#F4F4F6] tracking-tight leading-[0.92] mb-6 animate-hero-title">
                 Emporio <span className="text-gold-gradient">69</span>
               </h1>
 
               {/* Resumed punchy minimalist description */}
-              <p className="text-lg sm:text-xl text-[#9BA3B0] font-sans font-light leading-relaxed max-w-xl mb-10 animate-hero-subtitle">
+              <p className="text-base sm:text-xl text-[#9BA3B0] font-sans font-light leading-relaxed max-w-xl mb-10 animate-hero-subtitle">
                 Habanos de guarda, destilados de autor y el placer de detener el tiempo en la Patagonia.
               </p>
 
@@ -68,17 +68,17 @@ export default function Hero() {
               </div>
 
               {/* Minimalist Footnotes */}
-              <div className="flex items-center gap-8 pt-12 mt-10 border-t border-[#C89D54]/15 animate-hero-stats">
+              <div className="flex flex-wrap items-center justify-between sm:justify-start gap-4 sm:gap-8 pt-8 sm:pt-12 mt-8 sm:mt-10 border-t border-[#C89D54]/15 animate-hero-stats">
                 <div>
                   <p className="font-serif text-2xl text-[#DFB76C] font-bold">100%</p>
                   <p className="text-[10px] font-montserrat uppercase tracking-widest text-[#9BA3B0]">Habanos de Origen</p>
                 </div>
-                <div className="h-7 w-[1px] bg-white/10"></div>
+                <div className="h-7 w-[1px] bg-white/10 hidden sm:block"></div>
                 <div>
                   <p className="font-serif text-2xl text-[#DFB76C] font-bold">70% HR</p>
                   <p className="text-[10px] font-montserrat uppercase tracking-widest text-[#9BA3B0]">Guarda en Cedro</p>
                 </div>
-                <div className="h-7 w-[1px] bg-white/10"></div>
+                <div className="h-7 w-[1px] bg-white/10 hidden sm:block"></div>
                 <div>
                   <p className="font-serif text-2xl text-[#DFB76C] font-bold">Patagonia</p>
                   <p className="text-[10px] font-montserrat uppercase tracking-widest text-[#9BA3B0]">Cava & Salón</p>

@@ -150,14 +150,37 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom Bar: Copyright & Legal Notice */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-[#9BA3B0]/70 font-sans text-center md:text-left">
+        {/* Legal Adult Warning Banner (+18) */}
+        <div className="my-10 p-5 sm:p-6 rounded-2xl bg-[#111C2D] border border-[#C89D54]/35 shadow-xl flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <span className="w-12 h-12 rounded-2xl bg-gold-gradient text-[#0A111C] font-montserrat font-extrabold text-lg flex items-center justify-center flex-shrink-0 shadow-gold-glow select-none">
+              +18
+            </span>
+            <div>
+              <h5 className="font-montserrat text-xs sm:text-sm uppercase tracking-wider font-bold text-[#F4F4F6]">
+                Sitio Exclusivo para Mayores de 18 Años
+              </h5>
+              <p className="text-xs text-[#9BA3B0] font-sans mt-1 leading-relaxed max-w-2xl">
+                La comercialización de tabaco, habanos y bebidas con graduación alcohólica está terminantemente prohibida a menores de edad (<strong className="text-[#DFB76C] font-medium">Ley Nacional N° 26.687</strong>). Fumar es perjudicial para la salud y causa adicción.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 flex-shrink-0">
+            <span className="px-3.5 py-1.5 rounded-full bg-[#0A111C] border border-[#C89D54]/30 text-[10px] font-montserrat uppercase tracking-widest text-[#DFB76C] font-semibold">
+              Consumo Responsable
+            </span>
+          </div>
+        </div>
+
+        {/* Bottom Bar: Copyright */}
+        <div className="pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#9BA3B0] font-sans text-center sm:text-left">
           <p>
-            © {new Date().getFullYear()} Emporio 69 — Tabaquería & Ritual de Buen Vivir. Todos los derechos reservados.
+            © {new Date().getFullYear()} Emporio 69 — Tabaquería & Ritual de Buen Vivir. Bariloche, Patagonia Argentina.
           </p>
 
-          <p className="max-w-md text-[10px] text-[#9BA3B0]/50">
-            Fumar causa adicción y enfermedades respiratorias. La venta de tabaco y bebidas con alcohol está prohibida a menores de 18 años (Ley 26.687).
+          <p className="text-[11px] text-[#9BA3B0]/70">
+            Todos los derechos reservados.
           </p>
         </div>
 
